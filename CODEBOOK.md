@@ -11,10 +11,12 @@ A detailed description of the input dataset is provided in the the data download
 
 # Data Set Information
 The data set contains 15480 observations (1 per row), with 4 variables, described as follows:
-- $ activity_name: Factor w/ 6 levels "LAYING","SITTING",..: 1 1 1 1 1 1 1 1 1 1 ...
-- $ subject_id   : int  1 1 1 1 1 1 1 1 1 1 ...
-- $ variable     : Factor w/ 86 levels "angle.tBodyAccJerkMean..gravityMean.",..: 47 48 49 79 80 81 53 54 55 63 ...
-- $ avg_value    : num  0.2216 -0.0405 -0.1132 -0.2489 0.7055 ...
+```
+ $ activity_name: Factor w/ 6 levels "LAYING","SITTING",..: 1 1 1 1 1 1 1 1 1 1 ...
+ $ subject_id   : int  1 1 1 1 1 1 1 1 1 1 ...
+ $ variable     : Factor w/ 86 levels "angle.tBodyAccJerkMean..gravityMean.",..: 47 48 49 79 80 81 53 54 55 63 ...
+ $ avg_value    : num  0.2216 -0.0405 -0.1132 -0.2489 0.7055 ...
+ ```
  
 ## activity_name
 A 6-level factor describing the activity associated with the observation 
@@ -27,6 +29,7 @@ Identifier representing the anonymous participant (out of 30) in the tests - 1:3
 An 86-level factor containing the name of the variable identified in the observation - a subset of the 561 variables (or 'features') described in the input data set file - the subset represents only the mean and standard deviation variables from the input.
 Refer to "features_info.txt" contained in the input data set for more detail related to the source and semantics of these variables.
 (NOTE: special characters ['(),-] contained in the original names of the variables are replaced by "." to generate unique names compliant with R column naming requirements)
+```
  [1] tBodyAcc.mean...X                    tBodyAcc.mean...Y                    tBodyAcc.mean...Z                   
  [4] tGravityAcc.mean...X                 tGravityAcc.mean...Y                 tGravityAcc.mean...Z                
  [7] tBodyAccJerk.mean...X                tBodyAccJerk.mean...Y                tBodyAccJerk.mean...Z               
@@ -56,14 +59,16 @@ Refer to "features_info.txt" contained in the input data set for more detail rel
 [79] fBodyAccJerk.std...Z                 fBodyGyro.std...X                    fBodyGyro.std...Y                   
 [82] fBodyGyro.std...Z                    fBodyAccMag.std..                    fBodyBodyAccJerkMag.std..           
 [85] fBodyBodyGyroMag.std..               fBodyBodyGyroJerkMag.std..          
+```
 
 ## avg_value
 A numeric value, containing the average of all the inputs for the specified variable, for the specified activity and subject.
+```
 > summary(data$avg_value)
     Min.  1st Qu.   Median     Mean  3rd Qu.     Max. 
 -0.99770 -0.94480 -0.29460 -0.38430 -0.01599  0.97450 
 > str(data$avg_value)
  num [1:15480] 0.2216 -0.0405 -0.1132 -0.2489 0.7055 ...
- 
+```
  
  
