@@ -8,11 +8,15 @@ The following R packages must be installed: data.table, dplyr, tidyr, reshape
 
 ##Output file:
 The output file - the summarized tidy data set - is written to the working directory as: "tidy_narrow_summary_data.txt"
+This data set may easily be read into R, using:
+	tidyData <- read.table("tidy_narrow_summary_data.txt",header=T)
+	head(tidyData)
 The format of the output is an R data table, with headers, in narrow format, with the columns: "activity_name" "subject_id" "variable" "avg_value"
 Each row represents the average for a specific variable (identified by "variable"), for a specific subject doing a specific activity.
 Variables are described in the files features_info.txt/features.txt - supplied with the data set. Note that variable names have been altered slightly from the original list of variable names (features.txt) as the originals contained special characters not allowed in R column names. These characters "(),-" were replaced by a period character.
 The output tidy data text file that meets the principles of tidy data described in course lectures, and on Coursera discussion: https://class.coursera.org/getdata-013/forum/thread?thread_id=31
 See "codebook.md" for more information on the output data set.
+
 
 ##program notes
 The code in run_analysis.R works as follows:
