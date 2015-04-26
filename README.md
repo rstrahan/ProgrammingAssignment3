@@ -25,8 +25,8 @@ The code in run_analysis.R works as follows:
 
 2. define a function - load_label_extract_data_set() - which is used to modularize loading and cleaning, to avoid duplication for the two supplied datasets. The required function arguments supply the relative path to the files for X, y, and subject data.
 The following logic is performed:
-Read features, subjects, activities, and activity_labels, adding meaningful column names to these datasets
-Read X observations file, applying column names from features table using the col.names argument of read.data
+  * Read features, subjects, activities, and activity_labels, adding meaningful column names to these datasets
+  * Read X observations file, applying column names from features table using the col.names argument of read.data
   * Use select() to extract only the columns with either 'mean' or 'std' in the feature/column name
   * Use cbind() to add columns to identify subjects and activities
   * Use merge() to add the activity_name column by joining to activity_labels using the activity_id
