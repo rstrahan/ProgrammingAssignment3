@@ -20,7 +20,9 @@ The data set contains 15480 observations (1 per row), with 4 variables, describe
  
 ## activity_name
 A 6-level factor describing the activity associated with the observation 
+```
 Levels: LAYING SITTING STANDING WALKING WALKING_DOWNSTAIRS WALKING_UPSTAIRS
+```
 
 ## subject_id
 Identifier representing the anonymous participant (out of 30) in the tests - 1:30
