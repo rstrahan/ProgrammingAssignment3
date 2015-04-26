@@ -1,7 +1,7 @@
 # README notes for run_analysis.R 
 
 ##Use:
-To use this script, please set you working directory in R to the "UCI HAR Dataset" directory. 
+To use this script, please set the working directory in R to the "UCI HAR Dataset" directory. 
 The working directory must contain files "features.txt", "activity_labels.txt" and the subdirectories "train" and "test"
 The following R packages must be installed: data.table, dplyr, tidyr, reshape
 
